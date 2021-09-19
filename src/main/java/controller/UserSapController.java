@@ -8,9 +8,9 @@ import entities.UserSapEntity;
 import entities.UserSapFileException;
 import service.UserSapService;
 
-public class ReaderController {
+public class UserSapController {
 
-	public UserSapEntity getUserSap(String userId) throws UserSapFileException{
+	public static UserSapEntity getUserSap(String userId) throws UserSapFileException{
 		try {
 			UserSapService userSap = new UserSapService();
 			return userSap.findUser(userId);
@@ -20,7 +20,7 @@ public class ReaderController {
 		}
 	}
 	
-	public ServiceEntity getServiceByFields(Map<String, String> fieldsValues, UserSapEntity userSap) throws UserSapFileException{
+	public static ServiceEntity getServiceByFields(Map<String, String> fieldsValues, UserSapEntity userSap) throws UserSapFileException{
 		try {
 			UserSapService userSapService = new UserSapService();
 			return userSapService.findByServicesFields(fieldsValues, userSap);

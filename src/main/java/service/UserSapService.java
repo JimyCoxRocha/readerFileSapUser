@@ -43,8 +43,10 @@ public class UserSapService {
 	
 	public ServiceEntity findByServicesFields(Map<String, String> fieldsValues, UserSapEntity userSap) throws UserSapFileException {
 		try {
-			if(userSap == null || userSap.getServices() == null)
-				throw new UserSapFileException("El objeto con los servicios que desea buscar, no puede llegar vacía.", CodeEnum.BAD_REQUEST);
+			if(userSap == null || userSap.getServices() == null || fieldsValues.isEmpty())
+				throw new UserSapFileException("El objeto con los campos y valores de los servicios que desea buscar, no puede llegar vacío.", CodeEnum.BAD_REQUEST);
+			if(userSap.getServices().size() == 0)
+				throw new UserSapFileException("No se encontró coincidencia. No tiene autorización", CodeEnum.UNAUTHORIZED);
 			
 			List<ServiceEntity> services = userSap.getServices();
 			List<ServiceEntity> servicesSelected = new ArrayList<>();
@@ -58,6 +60,8 @@ public class UserSapService {
 				services = servicesSelected;
 				
 			}
+			if(servicesSelected.size() == 0)
+				throw new UserSapFileException("No se encontró coincidencia. No tiene autorización", CodeEnum.UNAUTHORIZED);
 			
 //			if(servicesSelected.size() > 0)
 				return servicesSelected.get(0);
