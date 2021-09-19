@@ -1,0 +1,8 @@
+entities\ServiceEntity.class
+service\UserSapService.class
+entities\ComunicationEntity.class
+entities\UserSapFileException.class
+Utilities\Helpers.class
+main\Main.class
+controller\ReaderController.class
+entities\UserSapEntity.class
