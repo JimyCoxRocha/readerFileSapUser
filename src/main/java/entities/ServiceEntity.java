@@ -58,6 +58,12 @@ public class ServiceEntity {
 	public void setType(String type) {
 		this.type = type;
 	}
+	@Override
+	public String toString() {
+		return "ServiceEntity [code=" + code + ", description=" + description + ", status=" + status + ", urlMethod="
+				+ urlMethod + ", nameMethod=" + nameMethod + ", pathRoot=" + pathRoot + ", pathApi=" + pathApi
+				+ ", type=" + type + "]";
+	}
 	
 	
 }
