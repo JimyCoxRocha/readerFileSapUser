@@ -42,4 +42,13 @@
 		</plugin>
 	  </plugins>
   </build>
+  <!--<dependency>
+	    <groupId>com.reader.file</groupId>
+	    <artifactId>readerfile</artifactId>
+	    <version>0.0.1</version>
+	    <scope>system</scope>
+	    <systemPath>
+	        C:/Users/JimyCox/Desktop/duragas/readerfile/target/ProjectJARs/readerUserSapFile.jar
+	    </systemPath>
+	</dependency>-->
 </project>
