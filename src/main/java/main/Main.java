@@ -1,8 +1,10 @@
 package main;
 <html>
     <body>
-        <div style='display: flex; flex-direction:column; align-items: center;'>
-            <img src='cid:logo' alt='logo familia duragas' max-width='3rem'>
+        <div style='align-items: center;'>
+            <div style='width: 100%; text-align: center;'>
+                <img src="duragas.png" alt='logo familia duragas' max-width='1rem' style="margin: 0px auto;">
+            </div>
             <h3 style="text-align: left;">Reporte de error</h3>
             <table>
                 <tr>
@@ -13,10 +15,10 @@ package main;
                 </tr>
                 <tbody>
 
-                    <td>${typeError}</td>
-                    <td>${dataBase}</td>
-                    <td>${service}</td>
-                    <td>${date}</td>
+                    <td style='padding: 1rem; border: 1px solid #2533fd;'>${typeError}</td>
+                    <td style='padding: 1rem; border: 1px solid #2533fd;'>${dataBase}</td>
+                    <td style='padding: 1rem; border: 1px solid #2533fd;'>${service}</td>
+                    <td style='padding: 1rem; border: 1px solid #2533fd;'>${date}</td>
                 </tbody>
 
             </table>
