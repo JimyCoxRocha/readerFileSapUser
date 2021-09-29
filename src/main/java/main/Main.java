@@ -1,5 +1,28 @@
 package main;
+<html>
+    <body>
+        <div style='display: flex; flex-direction:column; align-items: center;'>
+            <img src='cid:logo' alt='logo familia duragas' max-width='3rem'>
+            <h3 style="text-align: left;">Reporte de error</h3>
+            <table>
+                <tr>
+                    <th style='background-color:#c1c1c1; padding: 0.5rem;'>Error</th>
+                    <th style='background-color:#c1c1c1; padding: 0.5rem;'>DataBase</th>
+                    <th style='background-color:#c1c1c1; padding: 0.5rem;'>Servicio</th>
+                    <th style='background-color:#c1c1c1; padding: 0.5rem;'>Fecha</th>
+                </tr>
+                <tbody>
 
+                    <td>${typeError}</td>
+                    <td>${dataBase}</td>
+                    <td>${service}</td>
+                    <td>${date}</td>
+                </tbody>
+
+            </table>
+        </div>
+    </body>
+</html>
 import java.util.HashMap;
 import java.util.Map;
 
